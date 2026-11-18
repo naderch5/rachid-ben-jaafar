@@ -310,6 +310,22 @@
   .tele-grille .video { background: #000; }
   .tele-grille iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
   .tele-grille .corps { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+  /* Lecteur : image de la vidéo + bouton lecture. La vidéo Facebook ne se charge qu'au clic. */
+  .lecteur { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; background: #000; }
+  .lecteur img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.8); transition: transform .4s, filter .3s; }
+  .lecteur:hover img, .lecteur:focus-visible img { transform: scale(1.03); filter: brightness(.95); }
+  .lecteur .play {
+    position: absolute; left: 50%; top: 50%; width: 4.6rem; height: 4.6rem; transform: translate(-50%, -50%); border-radius: 50%;
+    background: linear-gradient(180deg, var(--or-clair), var(--or) 55%, var(--or-fonce));
+    box-shadow: 0 0 0 .45rem rgba(242,193,78,.28), 0 1rem 2rem rgba(0,0,0,.5);
+  }
+  .lecteur .play::before {
+    content: ""; position: absolute; left: 55%; top: 50%; transform: translate(-50%, -50%);
+    border-style: solid; border-width: .8rem 0 .8rem 1.25rem; border-color: transparent transparent transparent var(--nuit);
+  }
+  .tele-grille .lecteur .play { width: 3.7rem; height: 3.7rem; }
+  .tele-grille .lecteur .play::before { border-width: .65rem 0 .65rem 1rem; }
+  .tele-grille .tele-liens { margin-top: auto; padding-top: .25rem; }
   .ecran-vide {
     aspect-ratio: 16 / 9; display: grid; place-items: center; position: relative;
     background: radial-gradient(circle at 50% 50%, var(--porte-clair), var(--nuit) 80%);
@@ -562,7 +578,10 @@
 
       <article class="tele-majeur">
         <div class="video">
-          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2205660806665398%2F&show_text=false&width=720" title="Sofiene Show 2010 – Rachid chante الحب كله" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+          <a class="lecteur" href="https://www.facebook.com/reel/2205660806665398/" target="_blank" rel="noopener" data-largeur="720" title="Sofiene Show 2010 – Rachid chante الحب كله">
+            <img src="tele/sofiene.jpg" alt="Rachid, 13 ans, sur le plateau du Sofiene Show" width="565" height="318">
+            <span class="play" aria-hidden="true"></span>
+          </a>
         </div>
         <div class="corps">
           <p class="tele-chaine">Tunis 7 · 2010</p>
@@ -572,6 +591,7 @@
             <span class="ar">في سنّ الثالثة عشرة، غنّى رشيد «الحب كله» لأم كلثوم في برنامج سفيان الشعري، بحضور الملحّن المصري الكبير عمرو مصطفى. كانت تلك أولى خطواته على الركح.</span>
           </p>
           <div class="tele-liens">
+            <a href="https://www.facebook.com/reel/2205660806665398/" target="_blank" rel="noopener"><span class="fr">Voir sur Facebook</span><span class="ar">شاهد على فيسبوك</span></a>
             <a href="https://www.facebook.com/reel/1879829226186728/" target="_blank" rel="noopener"><span class="fr">Un autre extrait de l'émission</span><span class="ar">مقطع آخر من البرنامج</span></a>
           </div>
         </div>
@@ -579,19 +599,31 @@
 
       <ul class="tele-grille">
         <li>
-          <div class="video"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNessmaLive%2Fvideos%2F1601227933397365%2F&show_text=false&width=480" title="Nessma TV – Nessmet Laachya" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="video">
+            <a class="lecteur" href="https://www.facebook.com/NessmaLive/videos/1601227933397365/" target="_blank" rel="noopener" data-largeur="480" title="Nessma TV – Nessmet Laachya">
+              <img src="tele/nessma.jpg" alt="Rachid invité de Nessmet Laachya sur Nessma TV" width="560" height="315" loading="lazy">
+              <span class="play" aria-hidden="true"></span>
+            </a>
+          </div>
           <div class="corps">
             <p class="tele-chaine">Nessma TV</p>
             <h3 class="tele-emission">Nessmet Laachya <span class="ar">· نسمة العشية</span></h3>
             <p class="tele-texte"><span class="fr">Il présente son single « <bdi>لهلوبة</bdi> ».</span><span class="ar">قدّم أغنيته «لهلوبة».</span></p>
+            <div class="tele-liens"><a href="https://www.facebook.com/NessmaLive/videos/1601227933397365/" target="_blank" rel="noopener"><span class="fr">Voir sur Facebook</span><span class="ar">شاهد على فيسبوك</span></a></div>
           </div>
         </li>
         <li>
-          <div class="video"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1457832621071991%2F&show_text=false&width=480" title="Attessia TV – El Matinale" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="video">
+            <a class="lecteur" href="https://www.facebook.com/reel/1457832621071991/" target="_blank" rel="noopener" data-largeur="480" title="Attessia TV – El Matinale">
+              <img src="tele/attessia.jpg" alt="Rachid invité d'El Matinale sur Attessia TV" width="560" height="315" loading="lazy">
+              <span class="play" aria-hidden="true"></span>
+            </a>
+          </div>
           <div class="corps">
             <p class="tele-chaine">Attessia TV <span class="ar">· التاسعة</span></p>
             <h3 class="tele-emission">El Matinale</h3>
             <p class="tele-texte"><span class="fr">Invité de la matinale d'Attessia.</span><span class="ar">ضيف البرنامج الصباحي لقناة التاسعة.</span></p>
+            <div class="tele-liens"><a href="https://www.facebook.com/reel/1457832621071991/" target="_blank" rel="noopener"><span class="fr">Voir sur Facebook</span><span class="ar">شاهد على فيسبوك</span></a></div>
           </div>
         </li>
         <li>
@@ -750,6 +782,28 @@
     else if ((navigator.language || "").slice(0, 2) === "ar") appliquer("ar");
     document.getElementById("langue").addEventListener("click", function () {
       appliquer(html.lang === "ar" ? "fr" : "ar");
+    });
+
+    /* Vidéos télé : lecture sur place si le lecteur Facebook est accessible.
+       Certains navigateurs (Opera, Brave, bloqueurs de pub) le bloquent :
+       le clic ouvre alors simplement la vidéo sur Facebook. */
+    var lecteurFacebook = "https://www.facebook.com/plugins/video.php?show_text=false&autoplay=true&href=";
+    var facebookAccessible = false;
+    try {
+      fetch(lecteurFacebook + encodeURIComponent("https://www.facebook.com/"), { mode: "no-cors", credentials: "omit" })
+        .then(function () { facebookAccessible = true; }, function () {});
+    } catch (e) {}
+    Array.prototype.forEach.call(document.querySelectorAll(".lecteur"), function (lien) {
+      lien.addEventListener("click", function (evt) {
+        if (!facebookAccessible) return; /* le lien s'ouvre normalement sur Facebook */
+        evt.preventDefault();
+        var cadre = document.createElement("iframe");
+        cadre.src = lecteurFacebook + encodeURIComponent(lien.href) + "&width=" + (lien.getAttribute("data-largeur") || "560");
+        cadre.title = lien.title;
+        cadre.allow = "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+        cadre.allowFullscreen = true;
+        lien.replaceWith(cadre);
+      });
     });
   })();
 </script>
