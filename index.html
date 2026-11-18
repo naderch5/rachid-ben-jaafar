@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rachid Ben Jaafar – Chanteur tunisien</title>
+<meta name="description" content="Rachid Ben Jaafar, chanteur tunisien de tarab. Révélé enfant dans le Sofiene Show. Écoutez « بتعرف شعور », « خايف » et son nouveau single « حدا يقلأ ».">
+<meta property="og:title" content="Rachid Ben Jaafar – رشيد بن جعفر">
+<meta property="og:description" content="Chanteur tunisien, voix tarab. Écoutez ses chansons sur Spotify et YouTube.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://naderch5.github.io/rachid-ben-jaafar/photo-rachid.jpg">
+<meta property="og:url" content="https://naderch5.github.io/rachid-ben-jaafar/">
+<link rel="canonical" href="https://naderch5.github.io/rachid-ben-jaafar/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Noto+Naskh+Arabic:wght@400;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Rachid Ben Jaafar",
+  "alternateName": ["رشيد بن جعفر", "Rachid"],
+  "genre": ["Tarab", "Chanson arabe"],
+  "foundingLocation": "Tunisie",
+  "sameAs": [
+    "https://open.spotify.com/artist/3sjqq9aUjMHdwInzVe97Ry",
+    "https://www.youtube.com/@Rachid.Official",
+    "https://www.facebook.com/rachidbenjaafar24/",
+    "https://x.com/RachidBenJafar1",
+    "https://tiktok.com/@rachidofficial01",
+    "https://play.anghami.com/artist/7502391",
+    "https://music.apple.com/us/artist/rachid/1719428969",
+    "https://www.deezer.com/fr/artist/247613372"
+  ],
+  "image": "https://naderch5.github.io/rachid-ben-jaafar/photo-rachid.jpg"
+}
+</script>
+<style>
+  :root {
+    --nuit: #0F2747;        /* bleu de nuit des portes, fond des sections sombres */
+    --porte: #1D4E96;       /* bleu Sidi Bou Saïd */
+    --chaux: #F1F3F4;       /* mur blanchi à la chaux */
+    --chaux-ombre: #DDE3E8;
+    --clou: #13202F;        /* clous noirs des portes */
+    --jasmin: #F2C14E;      /* touche chaude, utilisée avec parcimonie */
+    --encre: #16273A;
+    --encre-douce: #4B5D70;
+
+    --latin: "Newsreader", Georgia, serif;
+    --arabe: "Noto Naskh Arabic", "Traditional Arabic", serif;
+    --ruqaa: "Aref Ruqaa", "Noto Naskh Arabic", serif;
+
+    --mesure: 34rem;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--chaux);
+    color: var(--encre);
+    font-family: var(--latin);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  html[lang="ar"] body { font-family: var(--arabe); line-height: 1.9; }
+
+  /* Bilingue : chaque texte existe en .fr et .ar */
+  html[lang="fr"] .ar { display: none; }
+  html[lang="ar"] .fr { display: none; }
+
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--jasmin); outline-offset: 3px; border-radius: 2px; }
+
+  .conteneur { width: min(72rem, 100% - 2rem); margin-inline: auto; }
+
+  /* ---------- En-tête ---------- */
+  .entete {
+    position: absolute; inset: 0 0 auto 0; z-index: 5;
+    padding-block: 1.25rem;
+  }
+  .entete .conteneur { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .entete nav { display: flex; gap: 1.5rem; font-size: 1rem; }
+  .entete nav a { text-decoration: none; color: var(--encre-douce); }
+  .entete nav a:hover { color: var(--porte); }
+  .langue {
+    font: inherit; font-size: 1rem; cursor: pointer;
+    background: none; border: 1.5px solid var(--porte); color: var(--porte);
+    padding: .3rem .9rem; border-radius: 999px;
+  }
+  .langue:hover { background: var(--porte); color: var(--chaux); }
+  @media (max-width: 40rem) { .entete nav { display: none; } }
+
+  /* ---------- Hero : le mur et la porte ---------- */
+  .hero {
+    min-height: 100svh;
+    display: grid; align-items: center;
+    padding-block: 6rem 4rem;
+    background:
+      radial-gradient(ellipse at 70% 40%, #fff 0%, transparent 60%),
+      var(--chaux);
+    overflow: hidden;
+  }
+  .hero .conteneur {
+    display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 5rem); align-items: center;
+  }
+  .nom-ar {
+    font-family: var(--ruqaa); font-weight: 700;
+    font-size: clamp(3.2rem, 8.5vw, 8rem);
+    line-height: 1.15; color: var(--porte); white-space: nowrap;
+    margin: 0; direction: rtl; text-align: start;
+  }
+  html[lang="fr"] .nom-ar { text-align: left; }
+  .nom-latin {
+    font-family: var(--latin); font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: .01em;
+    margin: .5rem 0 0; color: var(--encre);
+  }
+  .accroche {
+    max-width: var(--mesure); margin: 1.5rem 0 2rem; color: var(--encre-douce);
+    font-size: clamp(1.125rem, 1.6vw, 1.3rem);
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .bouton {
+    display: inline-flex; align-items: center; gap: .55rem;
+    font: inherit; font-size: 1.05rem; font-weight: 500; text-decoration: none;
+    padding: .75rem 1.4rem; border-radius: 999px; border: 1.5px solid var(--porte);
+  }
+  .bouton svg { width: 1.2em; height: 1.2em; flex: none; }
+  .bouton-plein { background: var(--porte); color: var(--chaux); }
+  .bouton-plein:hover { background: var(--nuit); border-color: var(--nuit); }
+  .bouton-vide { color: var(--porte); }
+  .bouton-vide:hover { background: rgba(29,78,150,.08); }
+
+  /* La porte : arche en fer à cheval, cadre bleu, clous noirs */
+  .porte {
+    justify-self: center;
+    width: min(100%, 25rem);
+    aspect-ratio: 3 / 4.3;
+    padding: 1.1rem;
+    background: var(--porte);
+    border-radius: 50% 50% .4rem .4rem / 34% 34% .4rem .4rem;
+    box-shadow: 0 2.5rem 4rem -2rem rgba(15,39,71,.45);
+    position: relative;
+  }
+  .porte::before { /* rangée de clous qui suit l'arche */
+    content: ""; position: absolute; inset: .45rem;
+    border: 5px dotted var(--clou);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .porte-int {
+    width: 100%; height: 100%;
+    border-radius: 50% 50% .2rem .2rem / 32% 32% .2rem .2rem;
+    overflow: hidden; position: relative;
+    background:
+      radial-gradient(circle at 50% 30%, #2C64B5 0%, var(--nuit) 75%);
+    display: grid; place-items: center;
+  }
+  .porte-int img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 30%;
+  }
+  .porte-initiale {
+    font-family: var(--ruqaa); font-size: 9rem; color: rgba(241,243,244,.18); line-height: 1;
+  }
+
+  @media (max-width: 52rem) {
+    .hero .conteneur { grid-template-columns: 1fr; }
+    .porte { width: min(78%, 20rem); order: -1; }
+    .hero { padding-top: 5rem; min-height: auto; }
+  }
+
+  /* Ouverture de la page : la porte apparaît, une seule fois */
+  @media (prefers-reduced-motion: no-preference) {
+    .porte { animation: ouverture 1.1s cubic-bezier(.2,.7,.2,1) both .15s; }
+    @keyframes ouverture {
+      from { opacity: 0; transform: translateY(1.5rem) scale(.97); }
+      to   { opacity: 1; transform: none; }
+    }
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: clamp(4rem, 9vw, 7rem); }
+  h2 {
+    font-weight: 500; font-size: clamp(2rem, 4.2vw, 3rem); line-height: 1.15;
+    margin: 0 0 2rem; letter-spacing: -.005em;
+  }
+  html[lang="ar"] h2 { font-family: var(--ruqaa); font-weight: 700; letter-spacing: 0; }
+  p { margin: 0 0 1.1em; }
+
+  /* Écouter : la nuit */
+  .ecouter { background: var(--nuit); color: var(--chaux); }
+  .ecouter h2 { color: #fff; }
+  .ecouter-grille { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(2rem, 4vw, 4rem); align-items: start; }
+  .spotify { border: 0; width: 100%; height: 420px; border-radius: 14px; background: #0b1d36; }
+  .titres { list-style: none; margin: 0; padding: 0; }
+  .titres li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: .85rem 0; border-bottom: 1px solid rgba(241,243,244,.14);
+  }
+  .titres .titre { font-family: var(--arabe); font-size: 1.35rem; font-weight: 600; direction: rtl; }
+  .titres .detail { color: rgba(241,243,244,.65); font-size: .95rem; white-space: nowrap; }
+  .titres .nouveau { color: var(--jasmin); }
+  .ecouter .lien-chaine { display: inline-block; margin-top: 1.75rem; color: var(--chaux); }
+  .ecouter .lien-chaine:hover { color: var(--jasmin); }
+  @media (max-width: 52rem) { .ecouter-grille { grid-template-columns: 1fr; } .spotify { height: 380px; } }
+  .plateformes { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.75rem; }
+  .plateformes a {
+    text-decoration: none; font-size: .95rem; padding: .4rem .95rem; border-radius: 999px;
+    border: 1px solid rgba(241,243,244,.35); color: var(--chaux);
+  }
+  .plateformes a:hover { border-color: var(--jasmin); color: var(--jasmin); }
+  .clips { margin-top: clamp(3rem, 6vw, 5rem); }
+  .clips h3 { font-weight: 500; font-size: 1.6rem; margin: 0 0 1.25rem; color: #fff; }
+  html[lang="ar"] .clips h3 { font-family: var(--ruqaa); font-weight: 700; }
+  .clips-grille { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .clips-grille iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 10px; background: #0b1d36; }
+  @media (max-width: 52rem) { .clips-grille { grid-template-columns: 1fr; } }
+
+  /* Histoire */
+  .histoire-grille { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); }
+  .histoire-texte { max-width: var(--mesure); }
+  .histoire-texte p:first-of-type { font-size: 1.3rem; color: var(--encre); }
+  .histoire-texte p { color: var(--encre-douce); }
+  .frise { list-style: none; margin: 0; padding: 0; position: relative; }
+  .frise::before {
+    content: ""; position: absolute; top: .6rem; bottom: .6rem; inset-inline-start: .45rem;
+    border-inline-start: 2px dotted var(--porte);
+  }
+  .frise li { position: relative; padding-inline-start: 2.25rem; padding-bottom: 1.75rem; }
+  .frise li::before {
+    content: ""; position: absolute; inset-inline-start: 0; top: .45rem;
+    width: 1rem; height: 1rem; border-radius: 50%; background: var(--clou);
+    box-shadow: 0 0 0 4px var(--chaux);
+  }
+  .frise .annee { display: block; font-weight: 600; color: var(--porte); font-size: 1.05rem; }
+  .frise .evenement { color: var(--encre); }
+  @media (max-width: 52rem) { .histoire-grille { grid-template-columns: 1fr; } }
+
+  /* Presse */
+  .presse { background: var(--chaux-ombre); }
+  .articles { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .articles a {
+    display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem; align-items: baseline;
+    padding: 1.4rem 0; border-top: 1px solid rgba(22,39,58,.15); text-decoration: none;
+  }
+  .articles li:last-child a { border-bottom: 1px solid rgba(22,39,58,.15); }
+  .articles .media { font-weight: 600; color: var(--porte); }
+  .articles .media small { display: block; font-weight: 400; color: var(--encre-douce); font-size: .9rem; }
+  .articles .titre-article { font-size: 1.2rem; }
+  .articles .titre-article[lang="ar"] { font-family: var(--arabe); }
+  html[lang="fr"] .articles .titre-article[lang="ar"] { text-align: left; }
+  .articles a:hover .titre-article { color: var(--porte); text-decoration: underline; text-underline-offset: .25em; }
+  @media (max-width: 40rem) { .articles a { grid-template-columns: 1fr; gap: .25rem; } }
+
+  /* Contact : retour à la porte bleue */
+  .contact { background: var(--porte); color: var(--chaux); text-align: center; }
+  .contact h2 { color: #fff; }
+  .contact p { max-width: var(--mesure); margin-inline: auto; color: rgba(241,243,244,.85); }
+  .contact .actions { justify-content: center; margin-top: 2rem; }
+  .contact .bouton-plein { background: var(--chaux); color: var(--nuit); border-color: var(--chaux); }
+  .contact .bouton-plein:hover { background: var(--jasmin); border-color: var(--jasmin); }
+  .contact .bouton-vide { color: var(--chaux); border-color: rgba(241,243,244,.6); }
+  .contact .bouton-vide:hover { background: rgba(241,243,244,.1); }
+
+  footer { background: var(--nuit); color: rgba(241,243,244,.6); padding-block: 2rem; font-size: .95rem; }
+  footer .conteneur { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+  footer .nom-pied { font-family: var(--ruqaa); font-size: 1.6rem; color: var(--chaux); }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <nav aria-label="Navigation">
+      <a href="#ecouter"><span class="fr">Écouter</span><span class="ar">استمع</span></a>
+      <a href="#histoire"><span class="fr">Son histoire</span><span class="ar">مسيرته</span></a>
+      <a href="#presse"><span class="fr">Presse</span><span class="ar">الصحافة</span></a>
+      <a href="#contact"><span class="fr">Contact</span><span class="ar">تواصل</span></a>
+    </nav>
+    <button class="langue" type="button" id="langue" aria-label="Changer de langue / تغيير اللغة">
+      <span class="fr">عربي</span><span class="ar">Français</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="nom">
+    <div class="conteneur">
+      <div>
+        <h1 id="nom" class="nom-ar" lang="ar">رشيد بن جعفر</h1>
+        <p class="nom-latin">Rachid Ben Jaafar</p>
+        <p class="accroche">
+          <span class="fr">Chanteur tunisien, voix tarab. Révélé enfant dans le « Sofiene Show », il chante aujourd'hui l'amour et l'attente, entre tradition et chanson d'aujourd'hui.</span>
+          <span class="ar">فنان تونسي وصوت طربي. اكتُشف طفلاً في «سفيان شو»، ويغنّي اليوم الحب والانتظار، بين الأصالة وروح الأغنية الحديثة.</span>
+        </p>
+        <div class="actions">
+          <a class="bouton bouton-plein" href="https://open.spotify.com/artist/3sjqq9aUjMHdwInzVe97Ry" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.52.85l10.92-6.86a1 1 0 0 0 0-1.7L9.52 4.29A1 1 0 0 0 8 5.14Z"/></svg>
+            <span class="fr">Écouter sur Spotify</span><span class="ar">استمع على سبوتيفاي</span>
+          </a>
+          <a class="bouton bouton-vide" href="https://www.youtube.com/@Rachid.Official" target="_blank" rel="noopener">
+            <span class="fr">Voir ses clips sur YouTube</span><span class="ar">شاهد الكليبات على يوتيوب</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="porte" aria-hidden="true">
+        <div class="porte-int">
+          <span class="porte-initiale">ر</span>
+          <!-- Mettre la photo de Rachid dans le même dossier, sous le nom photo-rachid.jpg -->
+          <img src="photo-rachid.jpg" alt="" onerror="this.remove()">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ecouter" id="ecouter" aria-labelledby="titre-ecouter">
+    <div class="conteneur">
+      <h2 id="titre-ecouter"><span class="fr">Écouter Rachid</span><span class="ar">استمع إلى رشيد</span></h2>
+      <div class="ecouter-grille">
+        <iframe class="spotify" title="Rachid sur Spotify"
+          src="https://open.spotify.com/embed/artist/3sjqq9aUjMHdwInzVe97Ry?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div>
+          <ul class="titres">
+            <li><span class="titre">حدا يقلأ</span><span class="detail nouveau"><span class="fr">Nouveau single</span><span class="ar">الإصدار الجديد</span></span></li>
+            <li><span class="titre">بتعرف شعور</span><span class="detail"><span class="fr">2024 · 364 000 écoutes</span><span class="ar">2024 · 364 ألف استماع</span></span></li>
+            <li><span class="titre">حان الآن</span><span class="detail"><span class="fr">48 000 écoutes</span><span class="ar">48 ألف استماع</span></span></li>
+            <li><span class="titre">خايف</span><span class="detail"><span class="fr">2024 · 38 000 écoutes</span><span class="ar">2024 · 38 ألف استماع</span></span></li>
+            <li><span class="titre">غريبين وليل</span><span class="detail"><span class="fr">Choix de l'artiste</span><span class="ar">اختيار الفنان</span></span></li>
+            <li><span class="titre">عليكي عيون</span><span class="detail">&nbsp;</span></li>
+            <li><span class="titre">الغرام المستحيل</span><span class="detail">&nbsp;</span></li>
+          </ul>
+          <div class="plateformes" aria-label="Plateformes / المنصات">
+            <a href="https://open.spotify.com/artist/3sjqq9aUjMHdwInzVe97Ry" target="_blank" rel="noopener">Spotify</a>
+            <a href="https://play.anghami.com/artist/7502391" target="_blank" rel="noopener">Anghami</a>
+            <a href="https://music.apple.com/us/artist/rachid/1719428969" target="_blank" rel="noopener">Apple Music</a>
+            <a href="https://music.youtube.com/channel/UCDD8VfiZsw3r9vbYUOG6p6g" target="_blank" rel="noopener">YouTube Music</a>
+            <a href="https://www.deezer.com/fr/artist/247613372" target="_blank" rel="noopener">Deezer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="clips">
+        <h3><span class="fr">Ses clips</span><span class="ar">الكليبات</span></h3>
+        <div class="clips-grille">
+          <iframe src="https://www.youtube-nocookie.com/embed/xL4KBo5Pioc" title="Clip de Rachid Ben Jaafar (1)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/uGggpN7R2Ks" title="Clip de Rachid Ben Jaafar (2)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <a class="lien-chaine" href="https://www.youtube.com/@Rachid.Official" target="_blank" rel="noopener">
+          <span class="fr">Tous ses clips sur sa chaîne YouTube</span><span class="ar">كل الكليبات على قناته في يوتيوب</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire" aria-labelledby="titre-histoire">
+    <div class="conteneur histoire-grille">
+      <div class="histoire-texte">
+        <h2 id="titre-histoire"><span class="fr">Son histoire</span><span class="ar">مسيرته</span></h2>
+        <div class="fr">
+          <p>La musique fait partie de la vie de Rachid Ben Jaafar depuis l'enfance.</p>
+          <p>Encore enfant, il se fait remarquer à la télévision tunisienne dans le « Sofiene Show », l'émission du regretté Sofiene Chaari. Face à un jury où siègent Pascal Machaalani et Wael Jassar, il convainc et va jusqu'à la finale.</p>
+          <p>Depuis, il reste fidèle au tarab et à la grande chanson arabe. Il travaille avec le maestro Mounir Ghadhab et construit un répertoire de chansons sentimentales portées par une voix chaleureuse. En 2024, « <bdi>بتعرف شعور</bdi> » dépasse les 360 000 écoutes sur Spotify.</p>
+          <p>Aujourd'hui, Rachid veut faire entendre sa voix bien au-delà de la Tunisie.</p>
+        </div>
+        <div class="ar">
+          <p>رافق شغف الغناء رشيد بن جعفر منذ طفولته.</p>
+          <p>وهو لا يزال طفلاً، لفت الانتباه على التلفزة التونسية في برنامج «سفيان شو» للراحل سفيان الشعري. أمام لجنة تحكيم ضمّت باسكال مشعلاني ووائل جسار، أقنع الجميع وبلغ النهائيات.</p>
+          <p>ومنذ ذلك الحين بقي وفيّاً للطرب وللأغنية العربية الأصيلة، فتعامل مع المايسترو منير الغضاب وبنى رصيداً من الأغاني العاطفية بصوت دافئ. وفي 2024 تجاوزت أغنيته «بتعرف شعور» 360 ألف استماع على سبوتيفاي.</p>
+          <p>اليوم، يريد رشيد أن يصل صوته إلى أبعد من حدود تونس.</p>
+        </div>
+      </div>
+
+      <ol class="frise" aria-label="Repères / محطات">
+        <li><span class="annee">2009</span><span class="evenement"><span class="fr">Finaliste du « Sofiene Show » à la télévision tunisienne</span><span class="ar">الوصول إلى نهائيات «سفيان شو» على التلفزة التونسية</span></span></li>
+        <li><span class="annee">2020</span><span class="evenement"><span class="fr">Prépare un album de tarab avec le maestro Mounir Ghadhab</span><span class="ar">يحضّر ألبوماً طربياً مع المايسترو منير الغضاب</span></span></li>
+        <li><span class="annee">2021</span><span class="evenement"><span class="fr">Clip de « <bdi>لهلوبة</bdi> »</span><span class="ar">كليب «لهلوبة»</span></span></li>
+        <li><span class="annee">2024</span><span class="evenement"><span class="fr">« <bdi>بتعرف شعور</bdi> » et « <bdi>خايف</bdi> » sur toutes les plateformes</span><span class="ar">«بتعرف شعور» و«خايف» على كل المنصات</span></span></li>
+        <li><span class="annee">2026</span><span class="evenement"><span class="fr">Nouveau single : « <bdi>حدا يقلأ</bdi> »</span><span class="ar">الإصدار الجديد: «حدا يقلأ»</span></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="presse" id="presse" aria-labelledby="titre-presse">
+    <div class="conteneur">
+      <h2 id="titre-presse"><span class="fr">Ils en parlent</span><span class="ar">في الصحافة</span></h2>
+      <ul class="articles">
+        <li>
+          <a href="https://www.alchourouk.com/article/بعد-11-عاما-من-ظهوره-في-«سفيان-شو»رشيد-جعفر-يصدر-ألبوما-طربيا-مع-منير-الغضاب" target="_blank" rel="noopener">
+            <span class="media">Echourouk <small>21/06/2020</small></span>
+            <span class="titre-article" lang="ar" dir="rtl">بعد 11 عاما من ظهوره في «سفيان شو»: رشيد جعفر يصدر ألبوما طربيا مع منير الغضاب</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/reel/1457832621071991" target="_blank" rel="noopener">
+            <span class="media">Attessia TV <small>El Matinale</small></span>
+            <span class="titre-article"><span class="fr">Invité de l'émission « El Matinale »</span><span class="ar">ضيف برنامج «الماتينال» على قناة التاسعة</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="titre-contact">
+    <div class="conteneur">
+      <h2 id="titre-contact"><span class="fr">Inviter Rachid</span><span class="ar">تواصل مع رشيد</span></h2>
+      <p>
+        <span class="fr">Pour un concert, un mariage, une émission ou une interview, écrivez-lui directement.</span>
+        <span class="ar">لحفلة أو عرس أو برنامج أو حوار صحفي، راسلوه مباشرة.</span>
+      </p>
+      <div class="actions">
+        <a class="bouton bouton-plein" href="https://m.me/rachidbenjaafar24" target="_blank" rel="noopener">
+          <span class="fr">Envoyer un message</span><span class="ar">أرسل رسالة</span>
+        </a>
+        <a class="bouton bouton-vide" href="https://www.facebook.com/rachidbenjaafar24/" target="_blank" rel="noopener">Facebook</a>
+        <a class="bouton bouton-vide" href="https://www.youtube.com/@Rachid.Official" target="_blank" rel="noopener">YouTube</a>
+        <a class="bouton bouton-vide" href="https://tiktok.com/@rachidofficial01" target="_blank" rel="noopener">TikTok</a>
+        <a class="bouton bouton-vide" href="https://open.spotify.com/artist/3sjqq9aUjMHdwInzVe97Ry" target="_blank" rel="noopener">Spotify</a>
+        <a class="bouton bouton-vide" href="https://x.com/RachidBenJafar1" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="conteneur">
+    <span class="nom-pied">رشيد بن جعفر</span>
+    <span>© 2026 Rachid Ben Jaafar</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var html = document.documentElement;
+    function appliquer(langue) {
+      html.lang = langue;
+      html.dir = langue === "ar" ? "rtl" : "ltr";
+      try { localStorage.setItem("langue", langue); } catch (e) {}
+    }
+    var enregistree = null;
+    try { enregistree = localStorage.getItem("langue"); } catch (e) {}
+    if (enregistree === "ar" || enregistree === "fr") appliquer(enregistree);
+    else if ((navigator.language || "").slice(0, 2) === "ar") appliquer("ar");
+
+    document.getElementById("langue").addEventListener("click", function () {
+      appliquer(html.lang === "ar" ? "fr" : "ar");
+    });
+  })();
+</script>
+</body>
+</html>
